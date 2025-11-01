@@ -59,7 +59,7 @@ func main() {
 		if strings.Contains(email, " ") {
 			errors = append(errors, "У адресі є пробіли")
 		}
-		if !regexp.MustCompile(`^[A-Za-z0-9._-]+$`).MatchString(email) {
+		if !regexp.MustCompile(`^[A-Za-z0-9._-]+$`).MatchString(local) {
 			errors = append(errors, "Недозволені символи") // (у локальній частині)
 		}
 		if !strings.Contains(domain, ".") {
